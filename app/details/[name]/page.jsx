@@ -6,8 +6,7 @@ import { MdOutlineKeyboardBackspace } from "react-icons/md";
 export default async function Details({ params }) {
     const {name} = await params
     const API = process.env.NEXT_PUBLIC_API
-if (!API) throw new Error("NEXT_PUBLIC_API is not defined");
-    const res = await fetch(`${API}/${name}`,{
+    const res = await fetch(`${API}/name/${name}`,{
         next: { revalidate: 0 }
     }
     )

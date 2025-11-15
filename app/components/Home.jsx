@@ -33,11 +33,11 @@ const Home = () => {
   useEffect(() => {
     const timeout = setTimeout(async () => {
       if (name.length > 0) {
-        fetchCountries(`/name/${name}`);
+        fetchCountries(`name/${name}`);
       } else if (region) {
-        fetchCountries(`/region/${region}`);
+        fetchCountries(`region/${region}`);
       } else {
-        fetchCountries("/region/asia");
+        fetchCountries("region/asia");
       }
     }, 400);
     return () => clearTimeout(timeout);
