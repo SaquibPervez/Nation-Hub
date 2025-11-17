@@ -12,7 +12,6 @@ const Home = () => {
   const API = process.env.NEXT_PUBLIC_API
   const fetchCountries = useCallback(async (endpoint) => {
     try {
-        if (!API) throw new Error("NEXT_PUBLIC_API is not defined");
       const response = await fetch(
         `${API}/${endpoint}`
       );
